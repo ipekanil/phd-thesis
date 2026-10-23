@@ -1,0 +1,121 @@
+site_name: Wavefront Coding for Computational Microscopy
+site_description: >-
+  Documentation of the PhD work of Ipek Anil Atalay Appak (Tampere University / INRIA Rennes):
+  end-to-end co-design of flat optics and neural reconstruction for fluorescence microscopy.
+site_author: Ipek Anil Atalay Appak
+site_url: https://ipekanil.github.io/phd-thesis/
+repo_url: https://github.com/ipekanil/phd-thesis
+repo_name: ipekanil/phd-thesis
+edit_uri: edit/main/docs/
+copyright: >-
+  Text © Ipek Anil Atalay Appak. Figures from Publications I–II and the thesis are © the authors,
+  used under CC BY 4.0. FLFM figures are drawn or generated for this site. Code under the licence of each repository.
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  icon:
+    logo: material/microscope
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Physics background:
+      - background/index.md
+      - Shallow depth of field: background/shallow-dof.md
+      - Fourier optics of a microscope: background/fourier-optics.md
+      - Wavefront coding: background/wavefront-coding.md
+      - Flat optics (DOEs and meta-optics): background/flat-optics.md
+      - "Try it: toy simulation": background/toy-simulation.md
+  - EDoF microscopy:
+      - edof/index.md
+      - 1. Forward model: edof/forward-model.md
+      - 2. Sampling criteria: edof/sampling.md
+      - 3. Optical element: edof/optical-element.md
+      - 4. Neural reconstruction: edof/reconstruction.md
+      - 5. End-to-end training: edof/training.md
+      - 6. Simulation results: edof/simulation-results.md
+      - 7. Experimental validation: edof/experiments.md
+      - 8. Reproduce: edof/reproduce.md
+      - 9. Limitations and notes: edof/limitations.md
+  - FLFM microscopy:
+      - flfm/index.md
+      - 1. Forward model: flfm/forward-model.md
+      - 2. Learned encoder: flfm/encoder.md
+      - 3. Reconstruction and training: flfm/reconstruction.md
+      - 4. Results: flfm/results.md
+      - 5. Reproduce: flfm/reproduce.md
+      - 6. Limitations and outlook: flfm/limitations.md
+  - Resources:
+      - Publications and citation: resources/publications.md
+      - Symbols and glossary: resources/glossary.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/orcid
+      link: https://orcid.org/0000-0001-5327-7423
+    - icon: fontawesome/brands/github
+      link: https://github.com/ipekanil
+
+validation:
+  links:
+    anchors: warn
+    unrecognized_links: warn
