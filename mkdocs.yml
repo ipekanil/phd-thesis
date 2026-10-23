@@ -13,6 +13,7 @@ copyright: >-
 
 theme:
   name: material
+  custom_dir: overrides
   language: en
   icon:
     logo: material/microscope

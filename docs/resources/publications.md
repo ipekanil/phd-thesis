@@ -2,7 +2,7 @@
 
 ## Thesis
 
-**I. A. Atalay Appak**, *Wavefront Coding for Computational Microscopy: From Optical Encoding to Neural Reconstruction*. Doctoral dissertation, Tampere University, Faculty of Information Technology and Communication Sciences (cotutelle with Université de Rennes), 2026.
+**I. A. Atalay Appak**, *Wavefront Coding for Computational Microscopy: From Optical Encoding to Neural Reconstruction*. Doctoral dissertation, Tampere University, Faculty of Information Technology and Communication Sciences (cotutelle with Université de Rennes), 2027.
 <!-- TODO: add the URN/ISBN link from the Tampere University repository (Trepo) once it is published. -->
 
 ## Original publications

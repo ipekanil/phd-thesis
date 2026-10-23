@@ -1,11 +1,17 @@
 ---
+title: Ipek Anil Atalay Appak – PhD research
+description: >-
+  Ipek Anil Atalay Appak, doctoral researcher at Tampere University and Université de Rennes / INRIA.
+  Wavefront coding, meta-optics and neural reconstruction for computational fluorescence microscopy.
 hide:
   - navigation
 ---
 
 # Wavefront Coding for Computational Microscopy
 
-**From optical encoding to neural reconstruction.** This site documents my PhD work at Tampere University (Finland) and Université de Rennes / INRIA (France). It explains the physics, the methods and the results, and shows how to reproduce them.
+**Ipek Anil Atalay Appak**, doctoral researcher at Tampere University (Finland) and Université de Rennes / INRIA (France).
+
+**From optical encoding to neural reconstruction.** This site documents my PhD work. It explains the physics, the methods and the results, and shows how to reproduce them.
 
 !!! abstract "The idea in one paragraph"
     A high-NA fluorescence microscope resolves fine detail, but only in a very thin slice of the sample. Scanning through depth is slow and exposes the sample to more light. My approach does not ask the optics to form a sharp image on the camera. Instead, a thin **learned phase element** in the microscope's Fourier plane *encodes* the image, and a **neural network** *decodes* it. The two are trained together (end-to-end) through a physics-based, differentiable model of the microscope. The result is a camera image that can be decoded over a much larger depth range, captured in a single shot.

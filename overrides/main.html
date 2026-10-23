@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {% if page and page.is_homepage %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ipek Anil Atalay Appak",
+    "alternateName": ["Ipek Anil Atalay", "Anil Atalay Appak", "I. A. Atalay Appak"],
+    "jobTitle": "Doctoral researcher",
+    "affiliation": [
+      {"@type": "CollegeOrUniversity", "name": "Tampere University"},
+      {"@type": "CollegeOrUniversity", "name": "Université de Rennes"},
+      {"@type": "ResearchOrganization", "name": "INRIA Rennes"}
+    ],
+    "knowsAbout": ["computational microscopy", "wavefront coding", "meta-optics", "extended depth of field", "Fourier light field microscopy"],
+    "url": "{{ config.site_url }}",
+    "sameAs": [
+      "https://orcid.org/0000-0001-5327-7423",
+      "https://github.com/ipekanil"
+    ]
+  }
+  </script>
+  {% endif %}
+{% endblock %}
