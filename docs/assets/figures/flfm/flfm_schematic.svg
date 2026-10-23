@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" width="960" height="470" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <title>FLFM with a learned Fourier-plane encoder: optical path and reconstruction pipeline</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5e35b1"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" fill="#ffffff"/>
+
+  <!-- optical axis -->
+  <line x1="40" y1="130" x2="880" y2="130" stroke="#c9c8c3" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- light cone -->
+  <path d="M95,130 L170,85 L330,85 L420,130 L330,175 L170,175 Z" fill="#fff3c4" opacity="0.9"/>
+  <path d="M420,130 L520,85 L700,85 L700,175 L520,175 Z" fill="#fff3c4" opacity="0.9"/>
+  <path d="M712,85 L800,95 L800,165 L712,175 Z" fill="#fff3c4" opacity="0.9"/>
+
+  <!-- sample volume -->
+  <g>
+    <rect x="58" y="98" width="46" height="64" fill="#f6f5f2" stroke="#52514e" stroke-width="1"/>
+    <line x1="58" y1="114" x2="104" y2="114" stroke="#c9c8c3"/>
+    <line x1="58" y1="130" x2="104" y2="130" stroke="#c9c8c3"/>
+    <line x1="58" y1="146" x2="104" y2="146" stroke="#c9c8c3"/>
+    <circle cx="70" cy="106" r="3" fill="#1baf7a"/><circle cx="92" cy="122" r="3" fill="#1baf7a"/>
+    <circle cx="78" cy="138" r="3" fill="#1baf7a"/><circle cx="95" cy="154" r="3" fill="#1baf7a"/>
+    <text x="81" y="188" text-anchor="middle" fill="#0b0b0b">volume o(x,y,z)</text>
+    <text x="81" y="204" text-anchor="middle" fill="#52514e" font-size="11">193×193×60 µm³</text>
+  </g>
+
+  <!-- objective -->
+  <ellipse cx="170" cy="130" rx="10" ry="48" fill="#e9e8e4" stroke="#52514e"/>
+  <text x="170" y="62" text-anchor="middle" fill="#0b0b0b">objective</text>
+  <text x="170" y="77" text-anchor="middle" fill="#52514e" font-size="11">60×, NA 1.1</text>
+
+  <!-- pupil -->
+  <line x1="245" y1="80" x2="245" y2="180" stroke="#52514e" stroke-dasharray="3 3"/>
+  <text x="245" y="200" text-anchor="middle" fill="#52514e" font-size="11">pupil</text>
+
+  <!-- tube lens -->
+  <ellipse cx="330" cy="130" rx="10" ry="48" fill="#e9e8e4" stroke="#52514e"/>
+  <text x="330" y="62" text-anchor="middle" fill="#0b0b0b">tube lens</text>
+  <text x="330" y="77" text-anchor="middle" fill="#52514e" font-size="11">180 mm</text>
+
+  <!-- intermediate image -->
+  <line x1="420" y1="88" x2="420" y2="172" stroke="#52514e" stroke-dasharray="3 3"/>
+  <text x="420" y="200" text-anchor="middle" fill="#52514e" font-size="11">image plane</text>
+
+  <!-- Fourier lens -->
+  <ellipse cx="520" cy="130" rx="10" ry="48" fill="#e9e8e4" stroke="#52514e"/>
+  <text x="520" y="62" text-anchor="middle" fill="#0b0b0b">Fourier lens</text>
+  <text x="520" y="77" text-anchor="middle" fill="#52514e" font-size="11">300 mm</text>
+
+  <!-- learned MLA -->
+  <g>
+    <rect x="696" y="80" width="10" height="100" fill="#ede7f6" stroke="#5e35b1"/>
+    <path d="M706,82 q9,8 0,17 M706,101 q6,9 0,18 M706,121 q11,9 0,18 M706,141 q7,9 0,18 M706,161 q10,8 0,17" fill="none" stroke="#5e35b1" stroke-width="1.6"/>
+    <text x="705" y="46" text-anchor="middle" fill="#5e35b1" font-weight="bold">learned MLA</text>
+    <text x="705" y="62" text-anchor="middle" fill="#0b0b0b" font-size="11">relayed Fourier plane</text>
+    <text x="705" y="77" text-anchor="middle" fill="#52514e" font-size="11">25 lenslets, f<tspan baseline-shift="sub" font-size="9">m,n</tspan></text>
+  </g>
+
+  <!-- sensor with views -->
+  <g>
+    <rect x="800" y="80" width="14" height="100" fill="#3b3a37"/>
+    <text x="807" y="62" text-anchor="middle" fill="#0b0b0b">sCMOS</text>
+    <g transform="translate(840,92)">
+      <rect width="76" height="76" fill="#f6f5f2" stroke="#52514e"/>
+      <circle cx="16" cy="16" r="8" fill="#1baf7a" opacity="0.8"/><circle cx="38" cy="16" r="8" fill="#1baf7a" opacity="0.5"/><circle cx="60" cy="16" r="8" fill="#1baf7a" opacity="0.8"/>
+      <circle cx="27" cy="38" r="8" fill="#1baf7a" opacity="0.6"/><circle cx="49" cy="38" r="8" fill="#1baf7a" opacity="0.9"/>
+      <circle cx="16" cy="60" r="8" fill="#1baf7a" opacity="0.5"/><circle cx="38" cy="60" r="8" fill="#1baf7a" opacity="0.8"/><circle cx="60" cy="60" r="8" fill="#1baf7a" opacity="0.6"/>
+    </g>
+    <text x="878" y="186" text-anchor="middle" fill="#52514e" font-size="11">views y<tspan baseline-shift="sub" font-size="9">Θ</tspan></text>
+  </g>
+  <line x1="814" y1="130" x2="838" y2="130" stroke="#52514e" marker-end="url(#arr)"/>
+  <text x="755" y="200" text-anchor="middle" fill="#52514e" font-size="11">f<tspan baseline-shift="sub" font-size="9">MLA</tspan> = 43.1 mm</text>
+
+  <!-- reconstruction pipeline -->
+  <g font-size="12.5">
+    <rect x="700" y="262" width="230" height="74" rx="6" fill="#f6f5f2" stroke="#52514e"/>
+    <text x="815" y="284" text-anchor="middle" fill="#0b0b0b" font-weight="bold">CG lift</text>
+    <text x="815" y="306" text-anchor="middle" fill="#0b0b0b">(A<tspan baseline-shift="sub" font-size="9">Θ</tspan><tspan baseline-shift="super" font-size="9">⊤</tspan>A<tspan baseline-shift="sub" font-size="9">Θ</tspan> + τI) o = A<tspan baseline-shift="sub" font-size="9">Θ</tspan><tspan baseline-shift="super" font-size="9">⊤</tspan>y<tspan baseline-shift="sub" font-size="9">Θ</tspan></text>
+    <text x="815" y="326" text-anchor="middle" fill="#52514e" font-size="11">10 unrolled iterations</text>
+
+    <rect x="430" y="268" width="216" height="62" rx="6" fill="#f6f5f2" stroke="#52514e"/>
+    <text x="538" y="291" text-anchor="middle" fill="#0b0b0b" font-weight="bold">reconstruction network R<tspan baseline-shift="sub" font-size="9">ψ</tspan></text>
+    <text x="538" y="310" text-anchor="middle" fill="#0b0b0b">ô = o<tspan baseline-shift="sub" font-size="9">cg</tspan> + 0.2 · residual</text>
+    <text x="538" y="324" text-anchor="middle" fill="#52514e" font-size="11">stem · atrous · U-Net</text>
+
+    <rect x="200" y="268" width="176" height="62" rx="6" fill="#f6f5f2" stroke="#52514e"/>
+    <text x="288" y="291" text-anchor="middle" fill="#0b0b0b" font-weight="bold">reconstructed volume ô</text>
+    <text x="288" y="312" text-anchor="middle" fill="#52514e" font-size="11">512 × 512 × 43 voxels</text>
+
+    <rect x="24" y="268" width="146" height="62" rx="6" fill="#ede7f6" stroke="#5e35b1"/>
+    <text x="97" y="294" text-anchor="middle" fill="#5e35b1" font-weight="bold">loss L(ô, o)</text>
+    <text x="97" y="313" text-anchor="middle" fill="#52514e" font-size="10.5">MAE, edge, SSIM, axial</text>
+  </g>
+  <path d="M878,192 L878,260" stroke="#52514e" fill="none" marker-end="url(#arr)"/>
+  <line x1="700" y1="299" x2="648" y2="299" stroke="#52514e" marker-end="url(#arr)"/>
+  <line x1="430" y1="299" x2="378" y2="299" stroke="#52514e" marker-end="url(#arr)"/>
+  <line x1="200" y1="299" x2="172" y2="299" stroke="#52514e" marker-end="url(#arr)"/>
+
+  <!-- gradient path -->
+  <path d="M97,332 L97,400 L680,400 L680,196 L697,184" fill="none" stroke="#5e35b1" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrP)"/>
+  <text x="400" y="422" text-anchor="middle" fill="#5e35b1">back-propagation through network, CG lift and wave-optics model → updates f<tspan baseline-shift="sub" font-size="9">m,n</tspan> and ψ</text>
+  <text x="400" y="452" text-anchor="middle" fill="#52514e" font-size="11">Training only: after training, the encoder is fixed and the same lift and network reconstruct measured images.</text>
+</svg>

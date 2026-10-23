@@ -1,0 +1,41 @@
+/* Figures: centred, readable captions */
+.md-typeset figure img {
+  border-radius: 4px;
+  background: #fff;
+}
+.md-typeset figcaption {
+  max-width: 44rem;
+  font-size: 0.72rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Key-number cards on landing pages */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.kpi {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  padding: 0.7rem 0.8rem;
+}
+.kpi .v {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--md-primary-fg-color);
+  line-height: 1.2;
+}
+[data-md-color-scheme="slate"] .kpi .v {
+  color: var(--md-accent-fg-color);
+}
+.kpi .l {
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Wide tables scroll instead of overflowing on phones */
+.md-typeset__table {
+  overflow-x: auto;
+}

@@ -1,0 +1,14 @@
+# Install PyTorch first, matching your CUDA version: https://pytorch.org
+torch>=2.1
+torchvision
+numpy
+scipy
+h5py
+matplotlib
+pandas
+scikit-image
+tifffile
+piqa
+wandb
+# only needed to read Olympus .oir/.oib stacks in eval_external.py
+oiffile

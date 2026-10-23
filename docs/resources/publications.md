@@ -1,0 +1,88 @@
+# Publications and citation
+
+## Thesis
+
+**I. A. Atalay Appak**, *Wavefront Coding for Computational Microscopy: From Optical Encoding to Neural Reconstruction*. Doctoral dissertation, Tampere University, Faculty of Information Technology and Communication Sciences (cotutelle with Université de Rennes), 2026.
+<!-- TODO: add the URN/ISBN link from the Tampere University repository (Trepo) once it is published. -->
+
+## Original publications
+
+**Publication I.** I. A. Atalay Appak, E. Sahin, C. Guillemot, H. Caglayan, "Learning flat optics for extended depth of field microscopy imaging," *Nanophotonics* **12**(18), 3623–3632 (2023). Open access, CC BY 4.0.
+[:material-link: doi:10.1515/nanoph-2023-0321](https://doi.org/10.1515/nanoph-2023-0321)
+
+**Publication II.** I. A. Atalay Appak, H. J. Singh, S. Korpela, T. O. Ihalainen, E. Sahin, C. Guillemot, H. Caglayan, "Multispectral extended depth-of-field fluorescence microscopy with co-designed meta-optics and neural reconstruction," *Light: Science & Applications* **15**, 242 (2026). Open access, CC BY 4.0.
+[:material-link: doi:10.1038/s41377-026-02337-y](https://doi.org/10.1038/s41377-026-02337-y) (supplementary information at the same link) ·
+[:material-github: code](https://github.com/humeyracaglayan/MANTIS) ·
+[:material-database: data](https://doi.org/10.5281/zenodo.18609221)
+
+**Publication III.** I. A. Atalay Appak, H. J. Singh, E. Sahin, C. Guillemot, H. Caglayan, "Fourier light field microscopy with learned phase mask arrays," manuscript in submission (2026).
+[:material-code-braces: code](https://github.com/ipekanil/phd-thesis/tree/main/code/flfm) · [:material-book-open-variant: documentation](../flfm/index.md)
+
+## BibTeX
+
+```bibtex
+@article{AtalayAppak2023FlatOpticsEDoF,
+  author  = {Atalay Appak, Ipek Anil and Sahin, Erdem and Guillemot, Christine and Caglayan, Humeyra},
+  title   = {Learning flat optics for extended depth of field microscopy imaging},
+  journal = {Nanophotonics},
+  volume  = {12},
+  number  = {18},
+  pages   = {3623--3632},
+  year    = {2023},
+  doi     = {10.1515/nanoph-2023-0321}
+}
+
+@article{AtalayAppak2026MANTIS,
+  author  = {Atalay Appak, Ipek Anil and Singh, Haobijam Johnson and Korpela, Sanna and
+             Ihalainen, Teemu O. and Sahin, Erdem and Guillemot, Christine and Caglayan, Humeyra},
+  title   = {Multispectral extended depth-of-field fluorescence microscopy with
+             co-designed meta-optics and neural reconstruction},
+  journal = {Light: Science \& Applications},
+  volume  = {15},
+  pages   = {242},
+  year    = {2026},
+  doi     = {10.1038/s41377-026-02337-y}
+}
+
+@misc{AtalayAppak2026MANTISData,
+  % TODO: check title and author list against the Zenodo record
+  author    = {Atalay Appak, Ipek Anil and others},
+  title     = {Multi-channel {EDoF} {MDCK} fluorescence dataset ({MANTIS})},
+  publisher = {Zenodo},
+  year      = {2026},
+  doi       = {10.5281/zenodo.18609221}
+}
+
+@unpublished{AtalayAppak2026FLFM,
+  author = {Atalay Appak, Ipek Anil and Singh, Haobijam Johnson and Sahin, Erdem and
+            Guillemot, Christine and Caglayan, Humeyra},
+  title  = {Fourier light field microscopy with learned phase mask arrays},
+  note   = {Manuscript in submission},
+  year   = {2026}
+}
+
+@phdthesis{AtalayAppak2026Thesis,
+  author = {Atalay Appak, Ipek Anil},
+  title  = {Wavefront Coding for Computational Microscopy: From Optical Encoding to Neural Reconstruction},
+  school = {Tampere University and Universit{\'e} de Rennes},
+  year   = {2026}
+}
+```
+
+## Key references
+
+- E. R. Dowski, W. T. Cathey, "Extended depth of field through wave-front coding," *Appl. Opt.* 34, 1859 (1995).
+- U. Akpinar, E. Sahin, M. Meem, R. Menon, A. Gotchev, "Learning wavefront coding for extended depth of field imaging," *IEEE Trans. Image Process.* 30, 3307 (2021).
+- V. Sitzmann et al., "End-to-end optimization of optics and image processing for achromatic extended depth of field and super-resolution imaging," *ACM Trans. Graph.* 37, 114 (2018).
+- L. Jin et al., "Deep learning extended depth-of-field microscope for fast and slide-free histology," *PNAS* 117, 33051 (2020).
+- E. Tseng et al., "Neural nano-optics for high-quality thin lens imaging," *Nat. Commun.* 12, 6493 (2021).
+- C. Guo et al., "Fourier light-field microscopy," *Opt. Express* 27, 25573 (2019).
+- F. L. Liu et al., "Fourier DiffuserScope: single-shot 3D Fourier light field microscopy with a diffuser," *Opt. Express* 28, 28969 (2020).
+- O. Ronneberger, P. Fischer, T. Brox, "U-Net: convolutional networks for biomedical image segmentation," MICCAI (2015).
+
+## Licences and reuse
+
+- Figures marked "Publication I/II" or "Thesis" are © the authors and reproduced under **CC BY 4.0**.
+- Figures in `assets/figures/generated/` are produced by `examples/toy_forward_model.py`.
+- MANTIS code: MIT licence (see the repository). FLFM code in `code/flfm`: MIT licence (see `LICENSE`).
+- Figures in `assets/figures/flfm/` are drawn for this site (schematic) or generated by `examples/flfm_figures.py` (toy models and charts of reported values). No Publication III manuscript figure is reproduced.
